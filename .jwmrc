@@ -1,0 +1,75 @@
+<JWM>
+
+  <!-- Tray at the top -->
+  <Tray x="0" y="0" height="32" autohide="false">
+    <TrayStyle>
+      <Font>Sans-10</Font>
+      <Foreground>#eeeeee</Foreground>
+      <Background>#2e3440</Background>
+      <Outline>#4c566a</Outline>
+    </TrayStyle>
+    <Swallow name="xload" width="64">xload -nolabel</Swallow>
+    <Clock format="%H:%M %d %b">xclock</Clock>
+  </Tray>
+
+  <!-- Window styling -->
+  <WindowStyle>
+    <Font>Sans-12</Font>
+    <Foreground>#eeeeee</Foreground>
+    <Background>#2e3440</Background>
+    <Outline>#4c566a</Outline>
+    <Active>
+      <Foreground>#ffffff</Foreground>
+      <Background>#5e81ac</Background>
+      <Outline>#81a1c1</Outline>
+    </Active>
+    <Inactive>
+      <Foreground>#bbbbbb</Foreground>
+      <Background>#3b4252</Background>
+      <Outline>#4c566a</Outline>
+    </Inactive>
+  </WindowStyle>
+
+  <!-- Icons -->
+  <IconPath>/usr/share/icons/Papirus</IconPath>
+  <IconPath>/usr/share/icons/Papirus-Light</IconPath>
+
+  <!-- Desktops -->
+  <Desktops width="2" height="2">
+    <Background type="solid">#2e3440</Background>
+  </Desktops>
+
+  <!-- Menu -->
+  <RootMenu onroot="12">
+    <Program icon="web-browser">qutebrowser</Program>
+    <Program icon="video-display">arandr</Program>
+    <Program icon="system-file-manager">pcmanfm</Program>
+    <Program icon="utilities-terminal">xterm</Program>
+    <Program icon="accessories-text-editor">leafpad</Program>
+    <Program icon="system-lock-screen">xlock</Program>
+    <Program icon="view-refresh">sudo systemctl reboot</Program>
+    <Program icon="system-shutdown">sudo systemctl poweroff</Program>
+    <Restart icon="view-refresh"/>
+    <Exit icon="system-log-out"/>
+  </RootMenu>
+
+  <!-- Keybindings -->
+  <Key key="Escape">root:12</Key>
+  <Key key="F2">xterm</Key>
+  <Key key="F3">pcmanfm</Key>
+  <Key key="F4">dunstctl close-all</Key>
+  <Key key="Super_L">exec:rofi -show drun</Key>
+
+  <!-- Desktop switching -->
+  <Key key="1" modifier="Alt">desktop#1</Key>
+  <Key key="2" modifier="Alt">desktop#2</Key>
+  <Key key="3" modifier="Alt">desktop#3</Key>
+  <Key key="4" modifier="Alt">desktop#4</Key>
+
+  <!-- Move window to desktop -->
+  <Key key="1" modifier="Alt+Control">sendto#1</Key>
+  <Key key="2" modifier="Alt+Control">sendto#2</Key>
+  <Key key="3" modifier="Alt+Control">sendto#3</Key>
+  <Key key="4" modifier="Alt+Control">sendto#4</Key>
+
+</JWM>
