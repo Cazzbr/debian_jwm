@@ -15,7 +15,7 @@ echo "Installing graphical system and core tools..."
 apt install -y xorg xinit jwm xterm xinput
 
 echo "Installing network and Bluetooth tools..."
-apt install -y network-manager nm-tray bluetooth bluez blueman
+apt install -y network-manager nm-tray bluetooth bluez blueman volumeicon
 
 echo "Installing PCManFM and archive tools..."
 apt install -y pcmanfm gvfs file-roller p7zip-full unzip
@@ -33,9 +33,11 @@ echo "Creating .xsession..."
 cat > "/home/$USERNAME/.xsession" <<EOF
 #!/bin/sh
 xinput --map-to-output "FTSC1000:00 2808:1015" DSI1
-picom --experimental-backends --fade-in-step=1.0 --fade-out-step=1.0 &
+picom --backend xrender &
 nm-tray &
 blueman-applet &
+volumeicon &
+xfce4-power-manager &
 diodon &
 dunst &
 feh --bg-scale /usr/share/backgrounds/desktop.jpg &
