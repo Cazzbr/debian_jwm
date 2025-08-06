@@ -24,7 +24,7 @@ echo "Installing desktop utilities: feh, diodon, dunst, picom..."
 apt install -y feh diodon dunst picom xtrlock xfce4-power-manager
 
 echo "Installing additional apps: qutebrowser, arandr, rofi..."
-apt install -y qutebrowser arandr rofi lxtask lxappearance scite
+apt install -y falkon arandr rofi lxtask lxappearance scite librewolf onboard
 
 echo "Installing Papirus icon theme..."
 apt install -y papirus-icon-theme
