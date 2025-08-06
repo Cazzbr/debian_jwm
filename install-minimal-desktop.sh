@@ -15,7 +15,7 @@ echo "Installing graphical system and core tools..."
 apt install -y xorg xinit jwm xterm xinput
 
 echo "Installing network and Bluetooth tools..."
-apt install -y network-manager nm-tray bluetooth bluez blueman volumeicon
+apt install -y network-manager nm-tray bluetooth bluez blueman volumeicon-alsa
 
 echo "Installing PCManFM and archive tools..."
 apt install -y pcmanfm gvfs file-roller p7zip-full unzip
@@ -23,8 +23,8 @@ apt install -y pcmanfm gvfs file-roller p7zip-full unzip
 echo "Installing desktop utilities: feh, diodon, dunst, picom..."
 apt install -y feh diodon dunst picom xtrlock xfce4-power-manager
 
-echo "Installing additional apps: qutebrowser, arandr, rofi..."
-apt install -y falkon arandr rofi lxtask lxappearance scite librewolf onboard
+echo "Installing additional apps: falkon, arandr, rofi..."
+apt install -y falkon arandr rofi lxtask lxappearance scite onboard
 
 echo "Installing Papirus icon theme..."
 apt install -y papirus-icon-theme
