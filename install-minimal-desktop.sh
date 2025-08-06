@@ -33,7 +33,7 @@ echo "Creating .xsession..."
 cat > "/home/$USERNAME/.xsession" <<EOF
 #!/bin/sh
 xinput --map-to-output "FTSC1000:00 2808:1015" DSI1
-picom --backend xrender &
+picom &
 nm-tray &
 blueman-applet &
 volumeicon &
