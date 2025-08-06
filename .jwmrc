@@ -7,13 +7,10 @@
         <Program icon="utilities-terminal" label="Terminal">xterm</Program>
         <Separator/>
         <Program icon="system-file-manager" label="PCManFM">pcmanfm</Program>
-       <Program icon="falkon" label="Falkon">falkon</Program>
-       <Program icon="qutebrowser" label="QuteBrowser">qutebrowser</Program>
+        <Program icon="falkon" label="Falkon">falkon</Program>
 	<Program icon="librewolf" label="LibreWolf">librewolf</Program>
-	<Program icon="/home/lmagri/.local/bin/zen/browser/chrome/icons/default/default128.png" label="Zen Browser">/home/lmagri/.local/bin/zen/zen</Program>
         <Separator/>
         <Program icon="Sci48M" label="Scite">scite</Program>
-        <!-- <Program icon="geany" label="Geany">geany</Program> -->
         <Program icon="vscode" label="VS Code">code</Program>
 	<Program icon="onlyoffice-desktopeditors" label="OnlyOffice">onlyoffice-desktopeditors</Program>
         <Separator/>
@@ -262,3 +259,4 @@
     <Mouse context="minimize" button="-3">shade</Mouse>
 
 </JWM>
+
