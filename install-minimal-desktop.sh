@@ -12,10 +12,10 @@ echo "Updating system..."
 apt update && apt upgrade -y
 
 echo "Installing graphical system and core tools..."
-apt install -y xorg xinit jwm xterm xinput
+apt install -y xorg xinit jwm xterm xinput fblogin
 
 echo "Installing network and Bluetooth tools..."
-apt install -y network-manager nm-tray bluetooth bluez blueman volumeicon-alsa
+apt install -y network-manager nm-applet bluetooth bluez blueman volumeicon-alsa
 
 echo "Installing PCManFM and archive tools..."
 apt install -y pcmanfm gvfs file-roller p7zip-full unzip
@@ -26,15 +26,12 @@ apt install -y feh diodon dunst picom xtrlock xfce4-power-manager
 echo "Installing additional apps: falkon, arandr, rofi..."
 apt install -y falkon arandr rofi lxtask lxappearance scite onboard
 
-echo "Installing Papirus icon theme..."
-apt install -y papirus-icon-theme
-
 echo "Creating .xsession..."
 cat > "/home/$USERNAME/.xsession" <<EOF
 #!/bin/sh
 xinput --map-to-output "FTSC1000:00 2808:1015" DSI1
 picom &
-nm-tray &
+nm-applet &
 blueman-applet &
 volumeicon &
 xfce4-power-manager &
