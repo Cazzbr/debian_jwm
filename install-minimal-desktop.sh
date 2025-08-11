@@ -12,7 +12,7 @@ echo "Updating system..."
 apt update && apt upgrade -y
 
 echo "Installing graphical system and core tools..."
-apt install -y xorg xinit jwm xterm xinput fblogin
+apt install -y xorg xinit jwm xterm xinput
 
 echo "Installing network and Bluetooth tools..."
 apt install -y network-manager nm-applet bluetooth bluez blueman volumeicon-alsa
