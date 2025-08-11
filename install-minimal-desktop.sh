@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Ensure script is run as root
 if [ "$(id -u)" -ne 0 ]; then
