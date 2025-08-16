@@ -121,7 +121,7 @@ echo "Custom theme applied."
 echo "Cleaning legacy network config..."
 if [ -f /etc/network/interfaces ]; then
   cp /etc/network/interfaces /etc/network/interfaces.backup
-  echo -e "auto lo\niface lo inet loopback" > /etc/network/interfaces
+  echo "auto lo\niface lo inet loopback" > /etc/network/interfaces
 fi
 if [ -f /etc/wpa_supplicant/wpa_supplicant.conf ]; then
   mv /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.backup
